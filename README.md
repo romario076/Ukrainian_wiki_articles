@@ -20,4 +20,5 @@ Here it is possibe manualy iteract with wiki data using SPARQL:
 <hr>
 
 ### Example:
-<img width="532" alt="image" src="https://github.com/user-attachments/assets/4a7d7ad5-56b2-4068-ae93-06f6a16c121b" />
+<img width="528" alt="image" src="https://github.com/user-attachments/assets/65e21e5d-1840-4a0d-8b0f-9fd54987c8c1" />
+
