@@ -20,6 +20,7 @@ Here it is possibe manualy iteract with wiki data using SPARQL:
 <hr>
 
 ### Example:
-![Uploading image.png…]()
+<img width="530" alt="image" src="https://github.com/user-attachments/assets/c1c63ccf-46c4-482f-8cdf-ac08716b23f3" />
+
 
 
