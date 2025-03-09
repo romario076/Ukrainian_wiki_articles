@@ -4,3 +4,4 @@ requests
 matplotlib
 basemap
 pydeck
+SPARQLWrapper
