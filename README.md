@@ -14,6 +14,17 @@ Launch jupyter notebook from cmd:
 jupyter notebook
 ```
 
+To make points clickable neccessary add the following code under the Layer dictionary in .html file
+```
+getPosition: (d) => d.coordinates,
+pickable: true,
+onClick: (info) => {
+  if (info.object && info.object.Article) {
+    window.open(info.object.Article, "_blank"); // Open URL in a new tab
+  }
+},
+```
+
 Here it is possibe manualy iteract with wiki data using SPARQL:
 * https://query.wikidata.org/
 
