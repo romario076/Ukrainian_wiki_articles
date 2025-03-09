@@ -41,6 +41,11 @@ Here it is possibe manualy iteract with wiki data using SPARQL:
 
 <hr>
 
+### Interactive Map
+https://raw.githack.com/romario076/ukrainian_wiki_articles/refs/heads/main/index.html
+
+Hove over data points to see additional information or click to open respective wikipedia page.
+
 ### Example:
 <img width="530" alt="image" src="https://github.com/user-attachments/assets/c1c63ccf-46c4-482f-8cdf-ac08716b23f3" />
 
