@@ -15,7 +15,7 @@ jupyter notebook
 ```
 
 To make points clickable neccessary add the following code under the Layer dictionary in .html file
-Uder "wireframe": true
+Under "wireframe": true
 ```
 getPosition: (d) => d.coordinates,
 pickable: true,
