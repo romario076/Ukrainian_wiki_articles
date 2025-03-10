@@ -36,7 +36,7 @@ controller: {
 }
 ```
 
-Here it is possibe manualy iteract with wiki data using SPARQL:
+Here it is possibe manually interact with wiki data using SPARQL:
 * https://query.wikidata.org/
 
 <hr>
