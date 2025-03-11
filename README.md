@@ -46,6 +46,7 @@ https://raw.githack.com/romario076/ukrainian_wiki_articles/refs/heads/main/index
 
 Hove over data points to see additional information or click to open respective wikipedia page.
 
+<hr>
 
 #### To change cursor type to more convenient add this to html file:
 ```
