@@ -46,6 +46,22 @@ https://raw.githack.com/romario076/ukrainian_wiki_articles/refs/heads/main/index
 
 Hove over data points to see additional information or click to open respective wikipedia page.
 
+
+#### To change cursor type to more convenient add this to html file:
+```
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+  cursor: crosshair !important; /* Force crosshair cursor */
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+  cursor: crosshair !important; /* Ensure crosshair for interactive elements */
+}
+```
+
 ### Example:
 <img width="530" alt="image" src="https://github.com/user-attachments/assets/c1c63ccf-46c4-482f-8cdf-ac08716b23f3" />
 
