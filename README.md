@@ -1,5 +1,5 @@
 # Ukrainian Wikipedia Articles Interactive Visualization
-This repository contains a python code which extracts locations of birth of ukrainians which have an wikipedia article. 
+This repository contains a python code which extracts locations of birth and death of ukrainians which have an wikipedia article. 
 This application takes into account wikipedia pegaes where specified nationality or affiliation to Ukraine.
 
 In ukrainians_wiki_articles.ipynb possible to create an application with intercative visualization maps where are possible to see a distrubution and hover over points to see detailed information.
