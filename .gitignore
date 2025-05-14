@@ -3,3 +3,6 @@
 .idea
 .ipynb_checkpoints
 __pycache__
+birth_base.html
+death_base.html
+index_template.html
