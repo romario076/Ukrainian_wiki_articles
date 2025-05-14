@@ -1,6 +1,13 @@
 # Ukrainian Wikipedia Articles Interactive Visualization
 This repository contains a python code which extracts locations of birth and death of ukrainians which have an wikipedia article. 
-This application takes into account wikipedia pegaes where specified nationality or affiliation to Ukraine.
+This application takes into account wikipedia peges where specified nationality, affiliation or birth place of countries:
+- Ukraine
+- Ukrainian Soviet Socialist Republic
+- Ukrainian People's Republic (UPR)
+- West Ukrainian People's Republic
+- Cossack Hetmanate
+- Kingdom of Galicia–Volhynia
+- Kyivan Rus
 
 In ukrainians_wiki_articles.ipynb possible to create an application with intercative visualization maps where are possible to see a distrubution and hover over points to see detailed information.
 Use zoom, scrolling and hover over points to interact with map.
