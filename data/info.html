@@ -34,10 +34,49 @@
       padding: 1rem;
       margin-top: 1rem;
       overflow-x: auto;
+      border-radius: 6px;
     }
 
     ul {
       margin-left: 1.5rem;
+    }
+
+    /* Стилі для таблиці */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #2a2a2a;
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 0.75em; /* Додано: менший шрифт */
+    }
+
+    thead {
+      background-color: #333;
+    }
+
+    th, td {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid #444;
+    }
+
+    th {
+      color: #ffeb3b;
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: #3a3a3a;
+    }
+
+    a {
+      color: #4fa3ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -49,8 +88,9 @@
     <h2>🧠 Загальний опис</h2>
     <p>
       Цей SPARQL-запит отримує інформацію про осіб, які пов’язані з Україною (як сучасною державою, так і її історичними формуваннями),
-      та мають сторінку у <strong>українській Вікіпедії</strong>. Запит повертає дані про місце народження, дату народження,
-      місце смерті (якщо відомо), дату смерті, стать, координати народження та смерті (якщо відомо).
+      та мають сторінку у <strong>українській Вікіпедії</strong>. 
+      <p>Запит повертає дані про місце народження, їх координати, дату народження, якщо відомо: місце смерті, їх координати, стать та інше.
+      </p>
     </p>
   </div>
 
@@ -97,9 +137,16 @@ WHERE {
   <div class="section">
     <h2>👥 Як обираються особи</h2>
     <ul>
-      <li><strong>Тип:</strong> особа (<code>wdt:P31 wd:Q5</code> – "instance of human").</li>
+      <li><strong>Тип:</strong> особа (<code>wdt:P31 wd:Q5</code> – "instance of human"). Тобто, вибираються статті лише про людей.</li>
       <li><strong>Походження:</strong> Визначає зв'язок з Україною через громадянство або місце народження. Тобто люди або мали громадянство історичної чи сучасної України (<code>wdt:P27</code>), або народилися на території однієї з визначених держав (<code>wdt:P19</code> → <code>wdt:P17</code>).</li>
-      <li><strong>Обов’язкова умова:</strong> повинна існувати сторінка про особу в українській Вікіпедії.</li>
+      <li><strong>Обов’язкові умови:</strong>
+         <ul>
+            <li>Повинна існувати сторінка про особу в українській Вікіпедії. </li>
+            <li>На сторінці повинно бути вказано місце народження, так як для відображення на карті потрібні координати місця народження.</li>
+            <li>Має бути вказана дата народження.</li>
+        </ul>
+    </li>
+      <li><strong>Додаткові умови:</strong> місце смерті, дата смерті, стать.</li>
     </ul>
   </div>
 
@@ -118,28 +165,40 @@ WHERE {
   </div>
 
   <div class="section">
-    <h2>📦 Які дані повертає запит</h2>
-    <ul>
-      <li><code>?person</code> – ID особи у WikiData</li>
-      <li><code>?personLabel</code> – Ім’я особи (українською)</li>
-      <li><code>?birthPlaceLabel</code> – Назва місця народження</li>
-      <li><code>?birthDate</code> – Дата народження</li>
-      <li><code>?coordinates</code> – Геокоординати місця народження</li>
-      <li><code>?deathPlaceLabel</code> – Місце смерті (якщо є)</li>
-      <li><code>?coordinates_death</code> – Координати місця смерті (якщо є)</li>
-      <li><code>?deathDate</code> – Дата смерті (якщо є)</li>
-      <li><code>?wikipedia</code> – Посилання на сторінку в українській Вікіпедії</li>
-      <li><code>?sexLabel</code> – Стать</li>
-      <li><code>?ukraineRelatedEntityLabel</code> – Назва пов’язаної української держави</li>
-    </ul>
-  </div>
-
-  <div class="section">
     <h2>📄 Приклад результату</h2>
     <div class="box">
-<pre><code>| person      | personLabel     | birthPlaceLabel | birthDate | coordinates     | deathPlaceLabel | coordinates_death | deathDate | sexLabel | wikipedia                                          | ukraineRelatedEntityLabel |
-|-------------|------------------|------------------|-----------|------------------|------------------|---------------------|------------|-----------|-----------------------------------------------------|----------------------------|
-| wd:Q42      | Тарас Шевченко   | Моринці          | 1814-03-09| Point(31.13 49.06)| Санкт-Петербург  | Point(30.31 59.93)  | 1861-03-10 | чоловіча | https://uk.wikipedia.org/wiki/Тарас_Шевченко        | Українська держава         |</code></pre>
+      <table>
+        <thead>
+          <tr>
+            <th>person</th>
+            <th>personLabel</th>
+            <th>birthPlaceLabel</th>
+            <th>birthDate</th>
+            <th>coordinates</th>
+            <th>deathPlaceLabel</th>
+            <th>coordinates_death</th>
+            <th>deathDate</th>
+            <th>sexLabel</th>
+            <th>wikipedia</th>
+            <th>ukraineRelatedEntityLabel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>wd:Q42</td>
+            <td>Тарас Шевченко</td>
+            <td>Моринці</td>
+            <td>1814-03-09</td>
+            <td>Point(31.13 49.06)</td>
+            <td>Санкт-Петербург</td>
+            <td>Point(30.31 59.93)</td>
+            <td>1861-03-10</td>
+            <td>чоловіча</td>
+            <td><a href="https://uk.wikipedia.org/wiki/Тарас_Шевченко" target="_blank">Wikipedia</a></td>
+            <td>Україна</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
