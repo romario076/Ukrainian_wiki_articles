@@ -9,7 +9,7 @@ This application takes into account wikipedia peges where specified nationality,
 - Kingdom of Galicia–Volhynia
 - Kyivan Rus
 
-👥 How Individuals Are Selected
+### 👥 How Individuals Are Selected
 - Type: The entity must be a human (wdt:P31 wd:Q5 – "instance of human").
 
 - Origin: Defines the connection to Ukraine either through citizenship or place of birth. In other words, individuals must either have had citizenship of a historical or modern Ukrainian state (wdt:P27), or have been born in a place that belonged to one of the specified entities (wdt:P19 → wdt:P17).
@@ -20,19 +20,19 @@ This application takes into account wikipedia peges where specified nationality,
 In ukrainians_wiki_articles.ipynb possible to create an application with intercative visualization maps where are possible to see a distrubution and hover over points to see detailed information.
 Use zoom, scrolling and hover over points to interact with map.
 
-Application contains three pages:
+### Application contains three pages:
  - Народження (page with interactive map with distribution of birth location, if it specified)
  - Смерть (page with interactive map with distribution of death location, if it specified)
  - Статистика (page with statistics by gender, distance between birth and death locations)
  - Інфо (information about SPARQL request)
 
 
-To reproduce results, firsly run:
+**To reproduce results, firsly run:**
 ```
 pip install -r requirements.txt
 ```
 
-Launch jupyter notebook from cmd:
+**Launch jupyter notebook from cmd:**
 ```
 jupyter notebook
 ```
