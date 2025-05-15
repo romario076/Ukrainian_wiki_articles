@@ -39,10 +39,7 @@ https://raw.githack.com/romario076/Ukrainian_wiki_articles/refs/heads/main/wiki_
 Hove over data points to see additional information or click to open respective wikipedia page.
 
 ### Example:
-<img width="955" alt="image" src="https://github.com/user-attachments/assets/317dafc4-cb5b-4806-8773-9db3f91fd78c" />
+<img width="953" alt="image" src="https://github.com/user-attachments/assets/e465169e-e997-4ffd-9d9c-beb77973d047" />
 
 <hr>
-
-```
-
 
