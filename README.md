@@ -9,6 +9,14 @@ This application takes into account wikipedia peges where specified nationality,
 - Kingdom of Galicia–Volhynia
 - Kyivan Rus
 
+👥 How Individuals Are Selected
+- Type: The entity must be a human (wdt:P31 wd:Q5 – "instance of human").
+
+- Origin: Defines the connection to Ukraine either through citizenship or place of birth. In other words, individuals must either have had citizenship of a historical or modern Ukrainian state (wdt:P27), or have been born in a place that belonged to one of the specified entities (wdt:P19 → wdt:P17).
+
+- Required Condition: There must be an existing article about the person in the Ukrainian Wikipedia.
+  
+
 In ukrainians_wiki_articles.ipynb possible to create an application with intercative visualization maps where are possible to see a distrubution and hover over points to see detailed information.
 Use zoom, scrolling and hover over points to interact with map.
 
