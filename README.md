@@ -16,6 +16,7 @@ Application contains three pages:
  - Народження (page with interactive map with distribution of birth location, if it specified)
  - Смерть (page with interactive map with distribution of death location, if it specified)
  - Статистика (page with statistics by gender, distance between birth and death locations)
+ - Інфо (information about SPARQL request)
 
 
 To reproduce results, firsly run:
